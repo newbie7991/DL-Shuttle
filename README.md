@@ -5,4 +5,4 @@ To run the project, install python and setup your database with the query provid
 Install framework MediaPipe, OpenCV, Numpy and Flask-Mysqldb
 
 
-Follow the step provided in the installation kits in the setup file
+Follow the step provided in the setup file to run the system
