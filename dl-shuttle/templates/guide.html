@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> Guide </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+      <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <div style="margin-left: 120px; font-size: 70; color: #fff;">
+                Welcome to DL Shuttle!
+            </div><br>
+            <div style="margin-left: 120px; font-size: 40; color: #fff;">
+                This is a Badminton Coaching Assistance System using A.I.
+            </div><br>><br>
+            <div style="margin-left: 120px; font-size: 20; color: #fff;">
+                It applied the technology of Pose Estimation in Deep Learning where it locate our joint as keypoint(for eg: knee, elbow, shoulder, wrist) in a video.
+                <br>Thanks a million to Google Team in making "MediaPipe",(a framework for customizable Machine Learning solutions) and making it open-sourced 
+                <br>for anyone to use it. Below is an example flow of how Pose Estimation works in badminton training. Click "NEXT" to proceed with the guide.
+            </div>
+            
+                <table>
+                    <tr>
+                        <th>
+                            <br><br>
+                            <img src="{{ url_for('static', filename='guideGif.gif') }}" style="width: 450; height: 250; margin-left: 120px;" >
+                        </th>
+                        <th>
+                            <p style="padding-bottom: 10px"><br><br><br><br><br>
+                                <a href="{{url_for('guide1')}}" style="text-decoration: none; color:white; text-align:center;
+                                padding: 30px 100px; background-color: #eb10ff; font-weight: bold; border-radius: 10px; margin-left: 400px;">NEXT</a>
+                            </p>
+                            <p style="padding-bottom: 10px"><br><br><br><br><br>
+                                <a href="{{url_for('tutorial')}}" style="text-decoration: none; color:white; text-align:center;
+                                padding: 30px 100px; background-color: #eb10ff; font-weight: bold; border-radius: 10px; margin-left: 400px;">Skip</a>
+                            </p>
+                        </th>
+                    </tr>
+            </table>
+        </div>
+    </body>
+</html>

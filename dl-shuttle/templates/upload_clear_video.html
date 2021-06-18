@@ -1,0 +1,81 @@
+<html>
+  <head>
+      <title> Upload Training Video </title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+  </head>
+<body>
+  <div class="banner">
+        <div class="navbar">
+            <h1 class="logo">DL Shuttle</h1>
+            <ul>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                <li><a href="{{url_for('history')}}">History</a></li>
+                <li><a href="{{url_for('summary')}}">Summary</a></li>
+                <li><a href="{{url_for('profile')}}">Profile</a></li>
+                <li><a href="{{url_for('login')}}">Logout</a></li>
+            </ul>
+        </div>
+        <div align="center"></br></br></br></br></br>
+          <div align="center" class="border">
+              <div class="header">
+                <h1 style="text-decoration: none;color: #FFFFFF; font-size: 40;">Please select your clear training video from your directory.</h1>
+              </div></br></br></br>
+              <form action="{{url_for('upload_clear_video')}}" method="POST" enctype="multipart/form-data">
+                <div class="msg">{{ msg }}</div>
+                <label style="text-decoration: none;color: #FFFFFF;font-size: 20;"> Please use only video with .mp4 extension !</label><br><br>
+                <div>
+                  <div>
+                    <label style="text-decoration: none;color: #FFFFFF;font-size: 30;margin-left: 80;">  Select Video >>></label>
+                    <input type="file" name="video" id="video" style="text-decoration: none;color: #FFFFFF; margin-left: 40px; font-size: 25;">
+                  </div>
+                </div><br><br>
+                <button type="submit" style="font-size: 25;" > Upload Video </button>
+              </form>
+            </div><br><br><br><br>
+            <div id='loadingmsg' style='display: none;'>Video is processing, please wait...</div>
+            <div id='loadingover' style='display: none;'></div>
+            <form action="{{url_for('clear')}}" method='post' onsubmit='showLoading();'> 
+              <button type="submit" style="text-decoration: none;color:white;text-align:center;padding: 20px 88px;
+              background-color: #eb10ff;font-weight: bold;border-radius: 10px;cursor: pointer;" > Start Video Training </button>
+           </form><br><br><br><br>
+            <a href="{{url_for('skill_selection')}}" style="text-decoration: none;color:white;text-align:center;padding: 20px 88px;
+            background-color: #eb10ff;font-weight: bold;border-radius: 10px;cursor: pointer;">Back to Selection</a>    
+        </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function showLoading() {
+    document.getElementById('loadingmsg').style.display = 'block';
+    document.getElementById('loadingover').style.display = 'block';
+}
+</script>
+
+<style type="text/css">
+  #loadingmsg {
+  color: white;
+  background: #eb10ff; 
+  padding: 30px;
+  position: fixed;
+  top: 45%;
+  left: 43%;
+  z-index: 100;
+  margin-bottom: -25%;
+  }
+  #loadingover {
+  background: black;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+}
+</style>

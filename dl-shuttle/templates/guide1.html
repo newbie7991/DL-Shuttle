@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> Guide </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+      <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <div style="margin-left: 120px; font-size: 50; color: #fff;">
+                1.   Record a video of yourself doing the training.
+            </div><br>
+            <div style="margin-left: 120px; font-size: 20; color: #fff;">
+                i.    You need to records from the front left of the net that is able to capture the players full body.<br>
+                ii.   You can record with a tripod stand or you can have someone holding the camera for you. <br>
+                iii.  It locate around 45 degrees right of the player's vision.<br>
+                iv.   The camera need to be around 3 feet high, its around the chest high of a 170cm guy.<br>
+                vi.   Make sure the arms, shoulder and wrisk of the player's can be seen clearly in the record angle.<br>
+                Vii.  When the recording started, players need to reduce unnecessary movement to improve the accuracy of the training.<br>
+                      ( Image below is a guide to the users on how the camera is setup and where the players stand. )
+            </div><br>><br>
+            <div>
+            </div>            
+                <table>
+                    <tr>
+                        <th>
+                            <img src="{{ url_for('static', filename='recordGuide.png') }}" style="width: 450; height: 250; margin-left: 120px;" >
+
+                        </th>
+                        <th>
+                            <p style="padding-bottom: 10px"><br><br><br><br><br>
+                                <a href="{{url_for('guide2')}}" style="text-decoration: none; color:white; text-align:center;
+                                padding: 30px 100px; background-color: #eb10ff; font-weight: bold; border-radius: 10px; margin-left: 400px;">NEXT</a>
+                            </p>
+                            <p style="padding-bottom: 10px"><br><br><br><br><br>
+                                <a href="{{url_for('guide')}}" style="text-decoration: none; color:white; text-align:center;
+                                padding: 30px 100px; background-color: #eb10ff; font-weight: bold; border-radius: 10px; margin-left: 400px;">Back</a>
+                            </p>
+                        </th>
+                    </tr>
+            </table>
+        </div>
+    </body>
+</html>

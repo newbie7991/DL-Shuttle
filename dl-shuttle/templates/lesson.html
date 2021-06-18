@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Guide </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+      <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div><br><br>
+                <h1 style="color: #fff; margin-left: 500px; margin-top: 40px;">Lesson and Guide for Beginner</h1>
+                <table class="content" style="margin-left: 120px;">
+                    <tr>    
+                        <td><br><br><br><br>
+                            <img src="{{ url_for('static', filename='smashGuide.jpg') }}" class="skillPic" >
+                            <li><a href="{{url_for('smashGuide')}}" style="text-decoration: none;color: #FFFFFF;">Smash</a></li>
+                        </td>
+                        <td><br><br><br><br>
+                            <img src="{{ url_for('static', filename='serveGuide.jpg') }}" class="skillPic">
+                            <li><a href="{{url_for('serveGuide')}}" style="text-decoration: none;color: #FFFFFF;">Serve</a></li>
+                        </td>
+                        <td><br><br><br><br>
+                            <img src="{{ url_for('static', filename='clearGuide1.jpg') }}" class="skillPic">
+                            <li><a href="{{url_for('clearGuide')}}" style="text-decoration: none;color: #FFFFFF;">Clear</a></li>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>

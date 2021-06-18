@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Clear Tutorial </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            /* width */
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888; 
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+            }
+            </style>
+    </head>   
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <th>
+                        <img src="{{ url_for('static', filename='clearTutorial.jpg') }}" style="width: 450; height: 250; margin-left: 120px;" >
+                    </th>
+                    <th>
+                        <H1 style="margin-left: 120px; font-size: 50; color: #fff; text-align: left;">
+                            Forehand Clear Shot
+                        </h1><br>
+                        <div style="margin-left: 120px; font-size: 20; color: #fff; text-align: left;">
+                            A basic clear shot is a shot that is ideally played high, from the baseline<br> of one court to the baseline of the opponent's court. It is normally considered <br>as a defensive shot to give the player some recovery time and also to push the other<br>player towards the baseline.
+                        </div><br>><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="{{ url_for('static', filename='clearTutorial1.gif') }}" style="width: 450; height: 250; margin-left: 120px;" >
+                    </th>
+                    <th><br><br><br>
+                        <H1 style="margin-left: 120px; font-size: 50; color: #fff;  text-align: left;">
+                            Tutorial
+                        </h1><br>
+                        <div style="margin-left: 120px; font-size: 20; color: #fff; text-align: left;">
+                            1. Get ready for the shuttle to reach your court.<br><br>
+                            2. Move(not run) to the direction of the shuttle.<br><br>
+                            3. Take aim with your left hand. Your front foot(left) should point in<br>
+                             the direction in which you want to hit and your back foot should <br>
+                             approximately be at 90 degrees to it.<br><br>
+                            4. Raise your racquet over your head, rotate using your arm and slap<br>
+                             the shuttle upwards using your wrist.<br><br>
+                            5. While you are ready to hit, all your weight should be on your back<br>foot. This will help you use your body force for the stroke.<br>
+                            6. Contact with the shuttle should be make when you are directly<br>below the shuttle and at the highest point.<br><br>
+                            7. After hitting the shuttle your racquet should come down to your<br>left side in a swinging motion.<br><br>
+                            8. Simultaneosly, your back foot should come in the front, completing<br>the action and thus helping you move to the middle of the court again.<br>
+                        </div><br>><br>
+                    </th>
+                </tr>
+                    <tr>
+                        <th><br><br>
+                            <img src="{{ url_for('static', filename='forehand_grip.jpg') }}" style="width: 450; height: 250; margin-left: 120px;" >
+                            <H1 style="margin-left: 120px; font-size: 50; color: #fff;  text-align: left;"><br>
+                                An example to hold a Forehand Grip
+                            </h1>
+                        </th>
+                        <th>
+                            <h3 style="margin-left: 120px; font-size: 40; color: #fff;  text-align: left;">
+                                Click the button below to navigate to a video coaching session.<br>
+                            </h3>
+                            <a href="https://www.youtube.com/watch?v=CbmGhtK5A24" target="_blank" style="color: rgb(0, 255, 255);"">Click Here</a><br><br><br><br><br><br><br><br>
+                                <a href="{{url_for('home')}}" style="text-decoration: none;color:white;
+                                text-align:center;padding: 20px 80px;background-color: #eb10ff; font-weight: bold;border-radius: 10px;cursor: pointer;">Home</a>
+                             <a href="{{url_for('tutorial')}}" style="text-decoration: none;color:white;
+                             text-align:center;padding: 20px 80px;background-color: #eb10ff; font-weight: bold;border-radius: 10px;cursor: pointer; margin-left: 400;">Back</a>
+ 
+                        </th>
+                    </tr>
+            </table>
+        </div>
+        <div class="banner">
+        </div>
+    </body>
+</html>

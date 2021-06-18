@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> View Correct Pose </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <table class="contentview" > 
+                <th style="margin-right: 40;">
+                    <div class="row"  style="margin-top: 60px;">
+                        <div class="column">
+                            <img src="{{ url_for('static', filename='/Image/CorrectPose/CorrectClear3.jpg') }}" alt="Correct" style="width:60%">
+                        </div>
+                        <div class="column">
+                            <img src="{{ url_for('static', filename='/Image/CorrectPose/CorrectClear2.jpg') }}" alt="Correct" style="width:60%">
+                        <div id="arrayImages"></div>
+                        <div class="column">
+                            <h1 style="color: #fff;">Correct Pose</h1>
+                        <div id="arrayImages"></div>
+                    </div>
+                </th> 
+                <th>
+                    <div class="row"  style="margin-top: 60px;">
+                        <div class="column">
+                            <img src="{{ url_for('static', filename='/Image/CorrectPose/CorrectClear.jpg') }}" alt="Correct" style="width:60%">
+                        </div>
+                        <div class="column">
+                            <img src="{{ url_for('static', filename='/Image/CorrectPose/CorrectClear1.jpg') }}" alt="Correct" style="width:60%">
+                        </div>
+                        <div class="column">
+                            <h1 style="color: #fff;">Correct Pose</h1>
+                        <div id="arrayImages"></div>
+                    </div>
+                </th>
+                <tr>
+                <p style="padding-top: 760px; padding-left: 230px;">
+                    <a href="{{url_for('home')}}" class="button">Back to Homepage</a>
+                </p>
+            </tr>
+            </table>
+        </div>
+    </body>
+</html>

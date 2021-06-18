@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Profile </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <div align="center"><br><br>
+                <div align="center"><br><br>
+                    <form action="{{ url_for('save_profile') }}" method="post">
+                        <div style="color: rgb(255, 251, 0); font-size: 30; text-align: center;">{{ msg }}</div>
+                            <input id="email" type="text" name="email" placeholder="Email ID" class='input'>
+                            <input id="gender" type="text" name="gender" placeholder="Gender" class='input'>
+                            <input id="skill" type="text" name="skill" placeholder="Skill Level" class='input'>
+                            <input id="password" name="password" type="password" placeholder="Password" class="input"/></br></br></br>
+                            <input type="submit" style="margin-left: px;" class="profilebutton" value="SAVE"></br>
+                        </form>
+                 </div>
+              </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Summary </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div><br><br>
+            <h1 style="color: #fff; margin-left: 850px; font-size: 70;">Summary</h1>
+            <table class="sumtable" style="margin-left:25%;margin-right:12%;">
+                <th ><br><br><br>
+                    <h1 class="summary" style="margin-top: 100px;">Technique</h1><br>
+                    <h1 class="summary">Clear</h1><br>
+                    <h1 class="summary">Smash</h1><br>
+                    <h1 class="summary">Serve</h1>
+                </th>
+                <th><br><br><br>
+                    <h1 class="summary" style="margin-top: 100px;">Correct Pose</h1><br>
+                    <h1 class="summary">{{clearCP}}</h1><br>
+                    <h1 class="summary">{{smashCP}}</h1><br>
+                    <h1 class="summary">{{serveCP}}</h1>
+                </th>   
+                <th><br><br><br>
+                    <h1 class="summary" style="margin-top: 100px;">Incorrect Pose</h1><br>
+                    <h1 class="summary">{{clearIP}}</h1><br>
+                    <h1 class="summary">{{smashIP}}</h1><br>
+                    <h1 class="summary">{{serveIP}}</h1>
+                </th>
+                <th><br><br><br>
+                    <h1 class="summary" style="margin-top: 100px;">Total</h1><br>
+                    <h1 class="summary">{{clear}}</h1><br>
+                    <h1 class="summary">{{smash}}</h1><br>
+                    <h1 class="summary">{{serve}}</h1>
+                </th>
+                <tr>
+                    <p style="padding-top: 550px; margin-left: 210px;">
+                        <a href="{{url_for('home')}}" class="button">Back To Homepage</a>
+                    </p>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+

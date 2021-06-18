@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Homepage </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+      <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+                <table class="content" style="margin-left: 200px;"> 
+                    <tr>
+                        <td>
+                            <img src="{{ url_for('static', filename='badminton_Training.png') }}" class="picture" style="margin-left: 40; padding: 0px 60px;" >
+                            <li><a href="{{url_for('skill_selection')}}" style="text-decoration: none;color: #FFFFFF;">Start Training</a></li>
+                        </td>
+                        <td>
+                            <img src="{{ url_for('static', filename='racquet.png') }}" class="picture" style="margin-left: 40;">
+                            <li><a href="{{url_for('guide')}}" style="text-decoration: none;color: #FFFFFF;">Guide & Tutorial</a></li>
+                        </td>
+                        <td>
+                            <img src="{{ url_for('static', filename='shuttlecock.jpg') }}" class="picture" style="margin-left: 40;padding: 0px 60px;">
+                            <li><a href="{{url_for('history')}}" style="text-decoration: none;color: #FFFFFF;">History</a></li>
+                        </td>
+                        <td>
+                            <img src="{{ url_for('static', filename='net.jpg') }}" class="picture" style="margin-left: 40;padding: 0px 60px;">
+                            <li><a href="{{url_for('summary')}}" style="text-decoration: none;color: #FFFFFF;">Summary</a></li>
+                        </td>
+                    </tr>
+            </table>
+            <div style="margin-left: 720px; font-size: 20; position: absolute; color: #000000; bottom: 5px; background-color: rgb(0, 255, 255)">
+                If your are new to this website, click-in "Guide" will brief you about it.
+            </div>
+      </div>
+        
+  </body>
+</html>
+  

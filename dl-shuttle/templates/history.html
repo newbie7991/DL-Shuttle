@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> History </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <h1 style="color: #fff; margin-left: 800px; margin-top: 100px; font-size: 50;">Training History</h1>
+            <table class="sumtable" style="margin-left:25%;margin-right:12%;">
+                <th>
+                    <h1 class="summary" style="margin-top: 40px; font-size: 40;">Date</h1><br>
+                    <h2 class="summary">{{date1}}</h2>
+                    <h2 class="summary">{{date2}}</h2>
+                    <h2 class="summary">{{date3}}</h2>
+                </th>
+                <th>
+                    <h1 class="summary" style="margin-top: 40px;font-size: 40;">Skill</h1><br>
+                    <h2 class="summary">{{skill1}}</h2>
+                    <h2 class="summary">{{skill2}}</h2>
+                    <h2 class="summary">{{skill3}}</h2>
+                </th>
+                <th>
+                    <h1 class="summary" style="margin-top: 40px;font-size: 40;">Correct Pose</h1><br>
+                    <h2 class="summary">{{CP1}}</h2>
+                    <h2 class="summary">{{CP2}}</h2>
+                    <h2 class="summary">{{CP3}}</h2>
+                </th>
+                <th>
+                    <h1 class="summary" style="margin-top: 40px;font-size: 40;">Incorrect Pose</h1><br>
+                    <h2 class="summary">{{IP1}}</h2>
+                    <h2 class="summary">{{IP2}}</h2>
+                    <h2 class="summary">{{IP3}}</h2>
+                </th>     
+            </table>
+        </div>
+    </body>
+</html>
+
+

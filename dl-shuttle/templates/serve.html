@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Serve </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <table class="contentview" > 
+                <th tyle="margin-left: 50;">
+                <img src="{{ url_for('static', filename='/Image/CorrectPose/CorrectServe.jpg') }}" style="margin-right: 40px;margin-left: 40px;margin-top: 0px;width: 800px;height: 500px;"><br>
+                </th> 
+                    <th>
+                        <td>    
+                            <h2>Training Date: {{Date}}</h2>
+                            <br>
+                            <br>
+                            <h2>Correct Pose: {{CP}}</h2>
+                            <br>
+                            <br>
+                            <h2 >Incorrect Pose: {{IP}}</h2>
+                            <br>
+                            <br>
+                            <h2 >Total: {{count}}</h2>
+                            <br>
+                            <br>
+                            <h2>Percentage of Correct Posture: {{perCP}}</h2>
+                            <br>
+                            <br>
+                            <h2>Percentage if Incorrect Posture: {{perIP}}</h2>
+                            <br>
+                            <br>
+                            <h2>Comment: {{cmt}}</h2>
+                        </td>
+                    </th>
+                    <tr>
+                        <p style="padding-top: 700px" >
+                            <a href="{{url_for('view_serve_pose')}}" class="button">View Training Image</a>
+                        </p>
+                    </tr>
+            </table>
+        </div>
+    </body>
+</html>

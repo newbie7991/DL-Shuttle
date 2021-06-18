@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Skill Selection </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+      <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div><Br><br>
+                <h1 style="color: #fff; margin-left: 750px; margin-top: 40px;">Please Select The Skill For Training</h1>
+                <table class="content" style="margin-left: 90px;">
+                    <tr>    
+                        <td>
+                            <img src="{{ url_for('static', filename='backgroundPicture.jpg') }}" class="skillPic" >
+                            <li><a href="{{url_for('upload_smash_video')}}" style="text-decoration: none;color: #FFFFFF;">Smash</a></li>
+                        </td>
+                        <td>
+                            <img src="{{ url_for('static', filename='clear.jpg') }}" class="skillPic">
+                            <li><a href="{{url_for('upload_clear_video')}}" style="text-decoration: none;color: #FFFFFF;">Clear</a></li>
+                        </td>
+                        <td>
+                            <img src="{{ url_for('static', filename='serve.jpg') }}" class="skillPic">
+                            <li><a href="{{url_for('upload_serve_video')}}" style="text-decoration: none;color: #FFFFFF;">Serve</a></li>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>

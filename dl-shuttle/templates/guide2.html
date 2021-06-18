@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Guide </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+    </head>
+    <body>
+      <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <div style="margin-left: 120px; font-size: 50; color: #fff;">
+                2.   Upload the recorded video to this website.
+            </div><br>
+            <div style="margin-left: 120px; font-size: 20; color: #fff;">
+                i.    Connect your device to your computer or laptop and save the training video to your computer.<br>
+                ii.   Upload your video to the system after selected the skill you wanted to train<br>
+                iii.  Start the analyzing process at the webpage by selecting the "Start Training" and select the skill you wanted to analyze.<br>
+                iv.   The analyzing will start after that, you need to wait for few seconds depends on the length of the training video.<br>
+                vi.   After that, the result will be showed the you together with commend to improve and images of the training session<br>
+                Vii.  There is tutorial on how to play smash, clear, and serve after selecting guide. Just select skip, and you will be directed to there.<br>
+                      ( Click "NEXT" to proceed to the skill tutorial part. You will be teach on how to play smash, clear and serve. )
+            </div><br>><br>
+            <div>
+            </div>
+            
+                <table>
+                    <tr>
+                        <th>
+                            <img src="{{ url_for('static', filename='upload_guide.png') }}" style="width: 450; height: 250; margin-left: 120px;" >
+
+                        </th>
+                        <th>
+                            <p style="padding-bottom: 10px"><br><br><br><br><br>
+                                <a href="{{url_for('tutorial')}}" style="text-decoration: none; color:white; text-align:center;
+                                padding: 30px 100px; background-color: #eb10ff; font-weight: bold; border-radius: 10px; margin-left: 400px;">NEXT</a>
+                            </p>
+                            <p style="padding-bottom: 10px"><br><br><br><br><br>
+                                <a href="{{url_for('guide1')}}" style="text-decoration: none; color:white; text-align:center;
+                                padding: 30px 100px; background-color: #eb10ff; font-weight: bold; border-radius: 10px; margin-left: 400px;">Back</a>
+                            </p>
+                        </th>
+                    </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Serve Tutorial </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            /* width */
+            ::-webkit-scrollbar {
+            width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888; 
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+            }
+            </style>
+    </head>   
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo">DL Shuttle</h1>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('skill_selection')}}">Training</a></li>
+                    <li><a href="{{url_for('history')}}">History</a></li>
+                    <li><a href="{{url_for('summary')}}">Summary</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('login')}}">Logout</a></li>
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <th><br><br><br>
+                        <img src="{{ url_for('static', filename='serve_example.gif') }}" style="width: 450; height: 250; margin-left: 120px;" >
+                    </th>
+                    <th>
+                        <H1 style="margin-left: 120px; font-size: 50; color: #fff; text-align: left;">
+                            Backhand Short Serve
+                        </h1><br>
+                        <div style="margin-left: 120px; font-size: 20; color: #fff; text-align: left;">
+                            Backhand low serve is a basic serving shot that is widely use by many players. A good low serve<br><br>
+                             will have the shuttlecock flying just above the net and it prevents your opponent from making an offensive shot easily. 
+                        </div><br>><br>
+                    </th>
+                </tr>
+                <tr>
+                    <th><br><br><br><br><br>
+                        <img src="{{ url_for('static', filename='serve_trajectory.gif') }}" style="width: 450; height: 250; margin-left: 120px;" ><br>
+                        <H1 style="margin-left: 120px; font-size: 50; color: #fff;  text-align: center;"><br>
+                            A Good Serve Trajectory
+                        </h1>
+                    </th>
+                    <th><br><br><br>
+                        <H1 style="margin-left: 120px; font-size: 50; color: #fff;  text-align: left;">
+                            Tutorial
+                        </h1><br>
+                        <div style="margin-left: 120px; font-size: 20; color: #fff; text-align: left;">
+                            1. Stand 2 to 3 feet behind the short service line.<br><br>
+                            2. Relax your body and bent your knees slightly.<br><br>
+                            3. Lead with your non-racquet leg and place your racket leg behind.<br><br>
+                            4. Bring your racquet back to your waist level then start your forward swing.<br><br>
+                            5. Hold the shuttle by the feathers and bring ti closer to meet the racquet instead of dropping it in front.<br><br>
+                            6. Contact the shuttle at a higher point but !! Still below your waist line.<br><br>
+                            7. Push the shuttle with the racket face and try to make the shuttle skim the tape of the net.<br><br>
+                        </div><br>><br>
+                    </th>
+                </tr>
+                    <tr>
+                        <th><br><br><br><br>
+                            <img src="{{ url_for('static', filename='backhand_grip.jpg') }}" style="width: 450; height: 250; margin-left: 120px;" >
+                            <H1 style="margin-left: 120px; font-size: 50; color: #fff;  text-align: left;"><br>
+                                An example to hold a Backhand Grip
+                            </h1>
+                        </th>
+                        <th>
+                            <h3 style="margin-left: 120px; font-size: 40; color: #fff;  text-align: left;">
+                                Click the button below to navigate to a video coaching session.<br><br>
+                            </h3>
+                            <a href="https://www.youtube.com/watch?v=kzWpvuWeih0&t=194s" target="_blank" style="color: rgb(0, 255, 255);">Click Here</a><br><br><br><br><br><br><br><br>
+                                <a href="{{url_for('home')}}" style="text-decoration: none;color:white;
+                                text-align:center;padding: 20px 80px;background-color: #eb10ff; font-weight: bold;border-radius: 10px;cursor: pointer;">Home</a>
+                             <a href="{{url_for('tutorial')}}" style="text-decoration: none;color:white;
+                             text-align:center;padding: 20px 80px;background-color: #eb10ff; font-weight: bold;border-radius: 10px;cursor: pointer; margin-left: 400;">Back</a>
+ 
+                        </th>
+                    </tr>
+            </table>
+        </div>
+        <div class="banner">
+        </div>
+    </body>
+</html>
